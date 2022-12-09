@@ -43,7 +43,8 @@ exports.config = {
     ],
     // Patterns to exclude.
     exclude: [
-        './features/**/login.feature'
+        './features/**/login.feature',
+        './features/**/selecionarProdutos.feature'
     ],
     //
     // ============
@@ -73,12 +74,12 @@ exports.config = {
         "appium:appiumVersion":"1.22.0",
         "appium:deviceName":"Samsung Galaxy S9 FHD GoogleAPI Emulator",
         "appium:deviceOrientation":"portrait",
-        "appium:app":"storage:filename=mda-1.0.16-19.apk",
-        "appium:appPackage":"com.saucelabs.mydemoapp.android",
-        "appium:appActivity":"com.saucelabs.mydemoapp.android.view.activities.SplashActivity",
+        "appium:app":"storage:filename=Calculator_8.3 (477856174)_Apkpure.apk",
+        "appium:appPackage":"com.google.android.calculator",
+        "appium:appActivity":"com.android.calculator2.Calculator",
         "appium:ensureWebviewsHavePages":true,
         "appium:nativeWebScreenshot":true,
-        "sauce:options":{"name":"Appium Aula Final"},
+        "sauce:options":{"name":"Reforco Calculcadora"},
         "appium:newCommandTimeout":3600,
         "appium:connectHardwareKeyboard":true
     }],
