@@ -44,7 +44,7 @@ exports.config = {
     // Patterns to exclude.
     exclude: [
         './features/**/login.feature',
-        './features/**/selecionarProdutos.feature'
+        './features/**/selecionarProduto.feature'
     ],
     //
     // ============

@@ -1,6 +1,8 @@
-const { Given, When, Then } = require("@wdio/cucumber-framework");
+const { Given, When, Then, After } = require("@wdio/cucumber-framework");
 
-// declaracao do elemento do display que sera visivel em 2 blocos
+After(async () =>{
+    await driver.closeApp()
+})
 
 Given(/^que a calculadora está aberta$/, async () => {
 
@@ -31,5 +33,5 @@ Then(/^exibe o resultado como "([^"]*)?"$/, async (numero) => {
     const display = "/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.LinearLayout/android.widget.FrameLayout[1]/android.widget.TextView"
 
     // validar o resultado esperado
-    expect(await $(display).getText().toEqual(numero))
+    expect(await $(display).getText()).toEqual(numero)
 })
